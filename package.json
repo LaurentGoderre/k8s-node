@@ -1,0 +1,22 @@
+{
+  "name": "k8s-node",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.13.0"
+  },
+  "scripts": {
+    "lint": "npx eslint src"
+  },
+  "eslintConfig": {
+    "extends": [
+      "google"
+    ],
+    "rules": {
+      "max-len": 0,
+      "require-jsdoc": 0
+    }
+  }
+}

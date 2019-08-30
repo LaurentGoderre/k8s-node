@@ -1,0 +1,15 @@
+image:
+  repository: #{IMAGE_REPOSITORY}
+  tag: #{IMAGE_TAG}
+# imagePullSecrets:
+#   - name: #{IMAGE_PULL_SECRET}
+env:
+  VERSION: #{VERSION} #Octopus.Release.Number
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  hosts:
+    - host: #{INGRESS_HOST}
+      paths:
+        - /
