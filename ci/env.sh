@@ -1,7 +1,7 @@
 #!/bin/sh
 [[ "$TRACE" ]] && set -eu
 
-export VERSION="$(git describe --tags  2>/dev/null  || echo 0.0.0 | sed 's|.\([0-9]*\)-\([0-9]*\)|.\1+\2|')"
+export VERSION="$((git describe --tags  2>/dev/null  || echo 0.0.0) | sed 's|.\([0-9]*\)-\([0-9]*\)|.\1+\2|')"
 export DOCKER_TAG="$(echo $VERSION | sed 's|+|_|')"
 
 function setup_docker() {

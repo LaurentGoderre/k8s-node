@@ -3,7 +3,6 @@ build:
 	&& export OCTOPUS_NAME=demo \
 	&& export CI_APPLICATION_REPOSITORY=k8s-node \
 	&& export IMAGE_REPOSITORY=$$CI_APPLICATION_REPOSITORY \
-	&& export DOCKER_TAG=$$VERSION \
 	&& export IMAGE_TAG=$$DOCKER_TAG \
 	&& export INGRESS_HOST="helloworld.info" \
 	&& build \
