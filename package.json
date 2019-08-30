@@ -5,15 +5,20 @@
     "express": "^4.16.3"
   },
   "devDependencies": {
+    "eslint": "^6.2.2",
     "eslint-config-google": "^0.13.0"
   },
   "scripts": {
-    "lint": "npx eslint src"
+    "lint": "npx eslint ."
   },
   "eslintConfig": {
     "extends": [
       "google"
     ],
+    "env": {
+      "es6": true,
+      "node": true
+    },
     "rules": {
       "max-len": 0,
       "require-jsdoc": 0
